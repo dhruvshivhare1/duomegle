@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Socket, io } from "socket.io-client";
 import "./Room.css";
 
-const URL = import.meta.env.VITE_BACKEND_URL || "http://127.0.0.1:3000";
+const URL = "https://duomegle.onrender.com";
 
 interface Message {
     text: string;
