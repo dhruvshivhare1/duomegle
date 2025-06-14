@@ -5,20 +5,31 @@ import cors from 'cors';
 import { UserManager } from './managers/UserManger';
 
 const app = express();
+
+// Define allowed origins based on environment
+const allowedOrigins: string[] = [
+    // Development URLs
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    // Production URLs
+    "https://duomegle.vercel.app"
+];
+
+// Add FRONTEND_URL if it exists
+if (process.env.FRONTEND_URL) {
+    allowedOrigins.push(process.env.FRONTEND_URL);
+}
+
+// CORS configuration
 app.use(cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
+    origin: allowedOrigins,
     credentials: true
 }));
 
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: [
-            "http://localhost:5173",
-            "http://127.0.0.1:5173",
-            "https://duomegle.vercel.app",
-            "https://duomegle.netlify.app"
-        ],
+        origin: allowedOrigins,
         methods: ["GET", "POST"],
         credentials: true
     }
