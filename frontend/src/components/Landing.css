@@ -1,0 +1,118 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.preview-video {
+    width: 480px;
+    height: 360px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #000;
+}
+
+.loading-message {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 1.2em;
+}
+
+.error-message {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: #fff3f3;
+    border: 1px solid #ffcdd2;
+    color: #d32f2f;
+    text-align: center;
+}
+
+.error-message button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d32f2f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.error-message button:hover {
+    background-color: #b71c1c;
+}
+
+.join-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.join-controls input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.join-controls button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2196f3;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-controls button:hover {
+    background-color: #1976d2;
+}
+
+.media-controls {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.control-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196f3;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control-button:hover {
+    background: rgba(33, 150, 243, 0.2);
+    transform: scale(1.05);
+}
+
+.control-button.off {
+    background: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+}
+
+.control-button.off:hover {
+    background: rgba(244, 67, 54, 0.2);
+}
+
+.control-button .icon {
+    font-size: 20px;
+}
