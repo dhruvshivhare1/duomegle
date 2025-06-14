@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Socket, io } from "socket.io-client";
 import "./Room.css";
 
-const URL = "https://duomegle.onrender.com";
+const URL = "https://duomegle-sewp.onrender.com";
 
 interface Message {
     text: string;
